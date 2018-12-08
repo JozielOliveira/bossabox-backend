@@ -1,0 +1,42 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Desafio Back-end Bossabox",
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_ENV=prod node ./index",
+    "dev": "NODE_ENV=prod nodemon ./src/index",
+    "test": "NODE_ENV=test mocha --opts test/mocha.opts test/**/**/*.js",
+    "test-integration": "NODE_ENV=test mocha --opts test/integration/mocha.opts test/integration/**/*.js",
+    "test-unit": "NODE_ENV=test mocha --opts test/unit/mocha.opts test/unit/**/*.js",
+    "test-contract": "NODE_ENV=test mocha --opts test/contract/mocha.opts test/contract/contracts/*.js"
+  },
+  "author": "Joziel Oliveira",
+  "license": "ISC",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-node6": "^11.0.0",
+    "bcrypt": "^3.0.2",
+    "body-parser": "^1.18.3",
+    "compression": "^1.7.2",
+    "cors": "^2.8.4",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "helmet": "^3.12.1",
+    "jwt-simple": "^0.5.1",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "pg": "^7.7.1",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.37.10"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "joi": "^14.3.0",
+    "joi-assert": "0.0.3",
+    "nodemon": "^1.18.7",
+    "mocha": "^5.2.0",
+    "supertest": "^3.3.0",
+    "testdouble": "^3.9.1"
+  }
+}

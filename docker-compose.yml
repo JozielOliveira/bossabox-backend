@@ -1,0 +1,16 @@
+version: "3.3"
+
+services:
+  app:
+    build: .
+    environment:
+      - USERNAME=tools
+      - DATABASE=tools
+      - PASSWORD=123456789
+      - HOST_DATABASE=104.197.129.85
+      - JWT_SECRET=NTE2MjM5MDIyfQSflKxwRJSMeCJ9eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFt
+    command: npm start
+    ports:
+      - "3000:3000"
+    volumes:
+      - ".:/usr/backend"
