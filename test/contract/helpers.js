@@ -2,7 +2,7 @@ import supertest from 'supertest';
 import chai from 'chai';
 import Joi from 'joi';
 import joiAssert from 'joi-assert';
-import app from '../../app.js';
+import app from '../../src/index';
 
 global.app = app;
 global.request = supertest(app);
